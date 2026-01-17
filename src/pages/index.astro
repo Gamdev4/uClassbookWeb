@@ -2,6 +2,8 @@
 import '@fontsource-variable/onest';
 
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import TimelineCard from '../components/TimelineCard.astro';
 ---
 
 <Layout>
@@ -19,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="flex flex-wrap justify-center gap-4 p-4">
 					<p 
 						class="text-purple-300 bg-black/30 rounded-full border px-11 py-2 font-medium border-slate-700">
-						Beta disponible!
+						Sitio en construcción!
 					</p>
 				</div>
 
@@ -33,14 +35,15 @@ import Layout from '../layouts/Layout.astro';
 
 				<div class="flex flex-wrap justify-center gap-4">
 					<a
-						class="inline-block rounded-lg px-6 py-3 font-medium bg-sky-500 text-slate-900 hover:bg-sky-300"
+						class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
 						href="/download"
 						>
 						Descargar
 					</a>
 
 					<a 
-						class="rounded-lg border px-6 py-3 font-medium border-slate-700 bg-slate-800 text-white hover:bg-slate-700"
+						class="inline-block rounded-xl px-8 py-4 font-medium text-white border-2 border-slate-700 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-900 hover:to-slate-800 transition-all transform hover:-translate-y-1 shadow-md"
+						
 						href="/#about"
 						>
 						Aprender Más
@@ -53,14 +56,149 @@ import Layout from '../layouts/Layout.astro';
 				<section id="about">
 					<p class="bg-gradient-to-r from-purple-200 via-indigo-300 to-cyan-200 bg-clip-text text-transparent">¿Qué es uClassbook?</p>
 				</section>
+
 			</div>
 		</div>	
 	</div>
 </main>
 
 	<main class="bg-slate-950">
-		<div class="flex max-w-[1120px] mx-auto px-6">
-			<p>p</p>
+		<div class="max-w-[1120px] mx-auto px-6">
+			<h1 class="text-3xl sm:text-4xl">Sobre <span class="bg-gradient-to-r from-purple-200 via-indigo-300 to-cyan-200 bg-clip-text text-transparent">uClassbook</span></h1>
+			<span class="text-slate-300">Una aplicación de estudio diseñada especificamente para estudiantes.</span>
+			<p class="py-3 text-sm text-slate-400">
+				No intenta ser otra plataforma complicada. Es una herramienta que se adapta a tu
+				forma de estudiar y evoluciona contigo conforme avanzas en tus clases.
+			</p>
+		</div>
+
+		<div class="h-12"></div>
+
+			
+		<div class="flex flex-col md:flex-row max-w-[1120px] mx-auto px-6">
+			<Card 
+				title="Actualizaciones constantes" 
+				description="Recibe mejoras semanales basadas en feedback real de estudiantes. Nuevas herramientas de estudio y optimizaciones de rendimiento que crecen contigo." 
+			/>
+
+			<Card 
+				title="Contenido personalizable" 
+				description="Diseña tu espacio de estudio ideal: temas, formas de estudio y flujos de trabajo. Adapta cada aspecto a tu estilo único de aprendizaje." 
+			/>
+
+			<Card 
+				title="Plantillas preestablecidas" 
+				description="Comienza en segundos con esquemas de estudio probados: flashcards, método pomodoro, mapas mentales, simulacros de exámenes y más. Ideal para maximizar productividad desde el primer día." 
+			/>
+
+		</div>
+
+		<div class="h-12"></div>
+
+		<section id="new">
+			<TimelineCard
+				date="24 de Enero, 2026"
+				title="Lanzamiento de uClassbook"
+				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore molestiae nobis amet voluptatem deleniti non assumenda fugit accusamus harum!"
+			/>
+
+			<TimelineCard
+				date="17 de Enero, 2026"
+				title="Lorem ipsum"
+				description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				link="#"
+			/>
+			
+		</section>
+
+		<div class="h-12"></div>
+
+		<div class ="mx-auto px-6 max-w-[1120px]">
+			<div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-10 border border-slate-700">
+					<h3 class="text-3xl font-bold text-white mb-8 text-center">¿Por qué elegir uClassbook?</h3>
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+						<div>
+							<ul class="space-y-6">
+								<li class="flex items-start gap-4">
+									<div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+										<span class="text-sky-300">✓</span>
+									</div>
+									<div>
+										<h4 class="text-lg font-semibold text-white mb-1">Creado por un estudiante</h4>
+										<p class="text-slate-400">Entendemos tus necesidades reales porque hemos pasado por lo mismo.</p>
+									</div>
+								</li>
+								<li class="flex items-start gap-4">
+									<div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+										<span class="text-sky-300">✓</span>
+									</div>
+									<div>
+										<h4 class="text-lg font-semibold text-white mb-1">Completamente Gratuita</h4>
+										<p class="text-slate-400">Sin suscripciones, sin anuncios, sin límites artificiales.</p>
+									</div>
+								</li>
+								<li class="flex items-start gap-4">
+									<div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+										<span class="text-sky-300">✓</span>
+									</div>
+									<div>
+										<h4 class="text-lg font-semibold text-white mb-1">Actualizaciones Constantes</h4>
+										<p class="text-slate-400">Basadas en feedback real de nuestra comunidad de estudiantes.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<ul class="space-y-6">
+								<li class="flex items-start gap-4">
+									<div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+										<span class="text-sky-300">✓</span>
+									</div>
+									<div>
+										<h4 class="text-lg font-semibold text-white mb-1">Privacidad Garantizada</h4>
+										<p class="text-slate-400">La app respeta tu privacidad: tus apuntes y notas permanecen siendo tuyos y bajo tu control.</p>
+									</div>
+								</li>
+								<li class="flex items-start gap-4">
+									<div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+										<span class="text-sky-300">✓</span>
+									</div>
+									<div>
+										<h4 class="text-lg font-semibold text-white mb-1">Disponible en Android e iOS</h4>
+										<p class="text-slate-400">Estudia desde tu teléfono o tablet, donde quieras y cuando quieras.</p>
+									</div>
+								</li>
+								<li class="flex items-start gap-4">
+									<div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+										<span class="text-sky-300">✓</span>
+									</div>
+									<div>
+										<h4 class="text-lg font-semibold text-white mb-1">Comunidad Activa</h4>
+										<p class="text-slate-400">Comparte recursos, resuelve dudas y conecta con otros estudiantes.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		<div class="text-center mt-20 max-w-[1120px] mx-auto px-6">
+					<h3 class="text-3xl font-bold text-white mb-6">¿Listo para transformar tu forma de estudiar?</h3>
+					<p class="text-slate-300 mb-10 max-w-2xl mx-auto">
+						Únete a los estudiantes que ya están optimizando su aprendizaje con uClassbook.
+					</p>
+					<a
+							href="/download"
+							class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
+						>
+							<span class="flex items-center gap-2">
+								<span>Descargar Gratis</span>
+							</span>
+						</a>
+					<p class="text-slate-500 mt-8 text-sm">
+						Disponible para Android e iOS
+					</p>
 		</div>
 
 		<div class="h-36"></div>
