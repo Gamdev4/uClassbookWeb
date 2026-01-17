@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <main>
+        <div class="relative h-screen">
+			<div class="absolute inset-0">
+				<div class="relative h-full w-full bg-slate-950 [&>div]:absolute [&>div]:inset-0 [&>div]:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] [&>div]:bg-[size:36px_36px] [&>div]:[mask-image:radial-gradient(ellipse_70%_60%_at_60%_0%,#000_80%,transparent_100%)]">
+				<div></div>
+				
+			</div></div>
+			
+			<div class="relative z-10 flex h-full flex-col items-center justify-center px-4">
+				<div class="max-w-3xl text-center">
+
+				<div class="flex flex-wrap justify-center gap-4 p-4">
+					<p 
+						class="text-purple-300 bg-black/30 rounded-full border px-11 py-2 font-medium border-slate-700">
+						Sitio en construcción!
+					</p>
+				</div>
+
+				<h1 class="mb-8 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl text-white">
+					Gracias por
+					<span class="text-sky-400">Descargar</span>
+				</h1>
+				<p id="message" class="mx-auto mb-8 max-w-2xl text-lg text-slate-300">
+					Detectando tu dispositivo...
+				</p>
+
+				<div class="flex flex-wrap justify-center gap-4">
+
+                    <div id="options" style="display:none;">
+                            <a 
+                                class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
+                                href="/ios"
+                            >
+                                iOS
+                            </a>
+                        
+                            <a 
+                                class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
+                                href="/android"
+                            >
+                                Android
+                            </a>
+                    </div>
+
+					<a 
+						class="inline-block rounded-xl px-8 py-4 font-medium text-white border-2 border-slate-700 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-900 hover:to-slate-800 transition-all transform hover:-translate-y-1 shadow-md"
+						
+						href="/#about"
+						>
+						Aprender Más
+					</a>
+
+				</div>
+			</div>
+			</div>	
+		</div>
+
+        <script type="module">
+        function detectDevice() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(ua)) return "android";
+            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return "ios";
+            return "desktop";
+        }
+
+        function redirectDevice(device) {
+            if(device === 'android') window.location.href = "/android";
+            if(device === 'ios') window.location.href = "/ios";
+        }
+
+        function init() {
+            const device = detectDevice();
+            const message = document.getElementById('message');
+            const options = document.getElementById('options');
+
+            if(device === 'android') {
+            message.innerText = "Tu descarga para Android debería comenzar pronto...";
+            setTimeout(() => redirectDevice('android'), 2000);
+            } else if(device === 'ios') {
+            message.innerText = "Tu descarga para iOS debería comenzar pronto...";
+            setTimeout(() => redirectDevice('ios'), 2000);
+            } else {
+            message.innerText = "¡Lo sentimos! Nuestra app solo está disponible en Android o iOS.";
+            options.style.display = "block";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', init);
+        </script>
+    </main>
+</Layout>
