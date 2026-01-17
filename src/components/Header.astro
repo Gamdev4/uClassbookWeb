@@ -1,0 +1,58 @@
+<div class="bg-gray-950/40 fixed top-0 left-0 w-full z-50 backdrop-blur">
+  <header class="relative flex items-center justify-between py-4 md:py-5 w-full max-w-[1120px] mx-auto px-4 md:px-6">
+
+    <span class="font-bold text-white text-lg md:text-xl">uClassbook</span>
+
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+    <label
+      for="menu-toggle"
+      class="md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer relative z-10"
+      aria-label="Abrir menú"
+    >
+      <span class="sr-only">Menú</span>
+      <span class="w-6 h-0.5 bg-white absolute -translate-y-2 peer-checked:rotate-45 peer-checked:translate-y-0"></span>
+      <span class="w-6 h-0.5 bg-white peer-checked:opacity-0"></span>
+      <span class="w-6 h-0.5 bg-white absolute translate-y-2 peer-checked:-rotate-45 peer-checked:translate-y-0"></span>
+    </label>
+
+    <nav
+      class="absolute top-full left-0 w-full bg-gray-950 flex flex-col items-center gap-6 py-8 px-6
+             opacity-0 pointer-events-none -translate-y-5 shadow-2xl border-t border-gray-800
+             peer-checked:opacity-100 peer-checked:pointer-events-auto peer-checked:translate-y-0
+             md:static md:w-auto md:flex md:flex-row md:gap-x-8 lg:gap-x-10 md:bg-transparent
+             md:opacity-100 md:pointer-events-auto md:translate-y-0 md:py-0 md:px-0 md:shadow-none md:border-0"
+    >
+      <a href="/#" class="text-gray-300 hover:text-purple-400 w-full md:w-auto text-center py-2 md:py-0">Inicio</a>
+      <a href="/#features" class="text-gray-300 hover:text-purple-400 w-full md:w-auto text-center py-2 md:py-0">Funciones</a>
+      <a href="/#new" class="text-gray-300 hover:text-purple-400 w-full md:w-auto text-center py-2 md:py-0">Nuevo</a>
+      <a href="/#about" class="text-gray-300 hover:text-purple-400 w-full md:w-auto text-center py-2 md:py-0">Sobre la app</a>
+      
+      <a
+        class="md:hidden flex items-center justify-center gap-3 w-full py-3 px-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50"
+        href="https://github.com/Gamdev4/uClassbookWeb"
+        target="_blank"
+        aria-label="Github"
+        title="Visitar repositorio en GitHub"
+      >
+        <svg class="size-5 fill-gray-300">
+          <use xlink:href="/assets/sprite.svg#github" />
+        </svg>
+        <span class="text-gray-300">GitHub</span>
+      </a>
+    </nav>
+
+    <a
+      class="hidden md:flex size-9 items-center justify-center"
+      href="https://github.com/Gamdev4/uClassbookWeb"
+      target="_blank"
+      aria-label="Github"
+      title="Visitar repositorio en GitHub"
+    >
+      <svg class="size-6 fill-gray-300">
+        <use xlink:href="/assets/sprite.svg#github" />
+      </svg>
+    </a>
+
+  </header>
+</div>
