@@ -21,7 +21,7 @@ import TimelineCard from '../components/TimelineCard.astro';
 				<div class="flex flex-wrap justify-center gap-4 p-4">
 					<p 
 						class="text-purple-300 bg-black/30 rounded-full border px-11 py-2 font-medium border-slate-700">
-						Sitio en construcción!
+						¡La beta está cerca!
 					</p>
 				</div>
 
@@ -35,8 +35,7 @@ import TimelineCard from '../components/TimelineCard.astro';
 
 				<div class="flex flex-wrap justify-center gap-4">
 					<a
-						class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
-						href="/download"
+						class="inline-block rounded-xl px-8 py-4 font-medium text-slate-900 bg-slate-700"
 						>
 						Descargar
 					</a>
@@ -75,37 +74,33 @@ import TimelineCard from '../components/TimelineCard.astro';
 		<div class="h-12"></div>
 
 			
-		<div class="flex flex-col md:flex-row max-w-[1120px] mx-auto px-6">
-			<Card 
-				title="Actualizaciones constantes" 
-				description="Recibe mejoras semanales basadas en feedback real de estudiantes. Nuevas herramientas de estudio y optimizaciones de rendimiento que crecen contigo." 
-			/>
+		<section id="features">
+			<div class="flex flex-col md:flex-row max-w-[1120px] mx-auto px-6">
+				<Card 
+					title="Actualizaciones constantes" 
+					description="Recibe mejoras semanales basadas en feedback real de estudiantes. Nuevas herramientas de estudio y optimizaciones de rendimiento que crecen contigo." 
+				/>
 
-			<Card 
-				title="Contenido personalizable" 
-				description="Diseña tu espacio de estudio ideal: temas, formas de estudio y flujos de trabajo. Adapta cada aspecto a tu estilo único de aprendizaje." 
-			/>
+				<Card 
+					title="Contenido personalizable" 
+					description="Diseña tu espacio de estudio ideal: temas, formas de estudio y flujos de trabajo. Adapta cada aspecto a tu estilo único de aprendizaje." 
+				/>
 
-			<Card 
-				title="Plantillas preestablecidas" 
-				description="Comienza en segundos con esquemas de estudio probados: flashcards, método pomodoro, mapas mentales, simulacros de exámenes y más. Ideal para maximizar productividad desde el primer día." 
-			/>
+				<Card 
+					title="Plantillas preestablecidas" 
+					description="Comienza en segundos con esquemas de estudio probados: flashcards, método pomodoro, mapas mentales, simulacros de exámenes y más. Ideal para maximizar productividad desde el primer día." 
+				/>
 
-		</div>
+			</div>
+		</section>
 
 		<div class="h-12"></div>
 
 		<section id="new">
 			<TimelineCard
 				date="24 de Enero, 2026"
-				title="Lanzamiento de uClassbook"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore molestiae nobis amet voluptatem deleniti non assumenda fugit accusamus harum!"
-			/>
-
-			<TimelineCard
-				date="17 de Enero, 2026"
-				title="Lorem ipsum"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				title="Beta cerrada de uClassbook"
+				description="El estudio inteligente es puesto a prueba."
 				link="#"
 			/>
 			
@@ -189,8 +184,7 @@ import TimelineCard from '../components/TimelineCard.astro';
 						Únete a los estudiantes que ya están optimizando su aprendizaje con uClassbook.
 					</p>
 					<a
-							href="/download"
-							class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
+							class="inline-block rounded-xl px-8 py-4 font-medium text-slate-900 bg-slate-700"
 						>
 							<span class="flex items-center gap-2">
 								<span>Descargar Gratis</span>
