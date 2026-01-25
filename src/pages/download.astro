@@ -17,7 +17,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="flex flex-wrap justify-center gap-4 p-4">
 					<p 
 						class="text-purple-300 bg-black/30 rounded-full border px-11 py-2 font-medium border-slate-700">
-						Sitio en construcción!
+						¡Beta disponible!
 					</p>
 				</div>
 
@@ -34,14 +34,15 @@ import Layout from '../layouts/Layout.astro';
                     <div id="options" style="display:none;">
                             <a 
                                 class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
-                                href="/ios"
+                                href="/"
                             >
                                 iOS
                             </a>
                         
                             <a 
                                 class="inline-block rounded-xl px-8 py-4 font-medium bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:from-sky-600 hover:to-cyan-600 transition-all transform hover:-translate-y-1"
-                                href="/android"
+                                href="https://drive.google.com/file/d/1dmQ22tIqjwgkNjEU4Ngrkoz2BtuHbF4j/view?usp=sharing"
+                                target="_blank"
                             >
                                 Android
                             </a>
@@ -70,8 +71,8 @@ import Layout from '../layouts/Layout.astro';
         }
 
         function redirectDevice(device) {
-            if(device === 'android') window.location.href = "/android";
-            if(device === 'ios') window.location.href = "/ios";
+            if(device === 'android') window.location.href = "https://drive.google.com/file/d/1dmQ22tIqjwgkNjEU4Ngrkoz2BtuHbF4j/view?usp=sharing";
+            if(device === 'ios') window.location.href = "https://drive.google.com/file/d/1dmQ22tIqjwgkNjEU4Ngrkoz2BtuHbF4j/view?usp=sharing";
         }
 
         function init() {
@@ -83,10 +84,10 @@ import Layout from '../layouts/Layout.astro';
             message.innerText = "Tu descarga para Android debería comenzar pronto...";
             setTimeout(() => redirectDevice('android'), 2000);
             } else if(device === 'ios') {
-            message.innerText = "Tu descarga para iOS debería comenzar pronto...";
+            message.innerText = "¡Lo sentimos! Actualmente no se encuentra disponible en iOS.";
             setTimeout(() => redirectDevice('ios'), 2000);
             } else {
-            message.innerText = "¡Lo sentimos! Nuestra app solo está disponible en Android o iOS.";
+            message.innerText = "¡Lo sentimos! Nuestra app solo está disponible en Android.";
             options.style.display = "block";
             }
         }
